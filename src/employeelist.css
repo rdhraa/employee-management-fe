@@ -1,0 +1,15 @@
+body {
+    background: linear-gradient(to right, #FF7E5F, #FEB47B); 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+  }
+  
+  .employee-list-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  

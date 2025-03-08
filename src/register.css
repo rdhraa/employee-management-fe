@@ -1,0 +1,37 @@
+body.login-register.page {
+    background-image: url('public/bg-img.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .mt-3 {
+    margin-top: 15px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
