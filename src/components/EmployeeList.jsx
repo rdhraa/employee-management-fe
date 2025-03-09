@@ -75,7 +75,7 @@ const EmployeeList = () => {
 
   return (
     <div className="employee-list-container" style={{ background: 'linear-gradient(to right, #FF7E5F, #FEB47B)' }}>
-      <h2>Employee List</h2>
+      <h2 className='employee-header'>Employee List</h2>
       <Button onClick={() => navigate('/add-employee')} className="add-employee-btn mb-3">
         Add Employee
       </Button>
