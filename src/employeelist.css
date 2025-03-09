@@ -1,15 +1,132 @@
 body {
-    background: linear-gradient(to right, #FF7E5F, #FEB47B); 
-    min-height: 100vh; 
-    margin: 0; 
-    padding: 0; 
-    width: 100%; 
-  }
-  
-  .employee-list-container {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; 
-  }
+  background: linear-gradient(to right, #FF7E5F, #FEB47B);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.employee-list-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2 {
+  color: white !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem!important;
+}
+
+button {
+  font-weight: bold!important;
+}
+
+button:focus {
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.add-employee-btn {
+  background-color: #fa6d4a !important;
+  color: white!important;
+  border: none!important;
+  padding: 10px 20px!important;
+  font-size: 16px!important;
+  border-radius: 5px;
+  cursor: pointer!important;
+  transition: background-color 0.3s ease!important;
+}
+
+.add-employee-btn:hover {
+  background-color: #FEB47B!important;
+}
+
+.form-control {
+  padding: 10px!important;
+  border-radius: 5px!important;
+  border: 1px solid #ccc!important;
+  font-size: 16px!important;
+}
+
+.pagination {
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+  margin-top: 20px!important;
+}
+
+.pagination button {
+  margin: 0 10px!important;
+  font-weight: bold!important;
+}
+
+.pagination button:focus {
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+.employee-card-container {
+  background-color:#FFEBE1!important;
+  border-radius: 10px!important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)!important;
+  padding: 20px!important;
+  text-align: center!important;
+  transition: transform 0.3s ease!important;
+}
+
+.employee-card-container:hover {
+  transform: translateY(-5px)!important;
+}
+
+.employee-card-container h4 {
+  font-size: 18px!important;;
+  color: #333!important;;
+}
+
+.employee-card-container .card-actions {
+  margin-top: 15px!important;;
+}
+
+.employee-card-container .edit-btn,
+.employee-card-container .delete-btn {
+  margin: 5px;
+}
+
+.edit-btn {
+  background-color: #f1b94f!important;;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease!important;
+}
+
+.edit-btn:hover {
+  background-color: #feb47b!important;
+}
+
+.delete-btn {
+  background-color: #ff4747;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #ff2b2b;
+}
+
   

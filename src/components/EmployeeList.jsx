@@ -51,12 +51,18 @@ const EmployeeList = () => {
 
   const handleDeleteEmployee = async (id) => {
     const token = localStorage.getItem('token');
+    try{
     await axios.delete(`https://employee-management-be-j9ck.onrender.com/api/employees/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
     fetchEmployees();
+    alert("Employee successfully deleted!");
+  } catch (error) {
+    console.error('Error deleting employee:', error);
+    alert("There was an error deleting the employee. Please try again.");
+  }
   };
 
   const handleEditEmployee = (id) => {
@@ -68,13 +74,11 @@ const EmployeeList = () => {
     .filter((employee) => employee.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
-    <div style={{
-      background: 'linear-gradient(to right, #FF7E5F, #FEB47B)',
-      minHeight: '100vh',
-      padding: '20px',
-    }}>
+    <div className="employee-list-container" style={{ background: 'linear-gradient(to right, #FF7E5F, #FEB47B)' }}>
       <h2>Employee List</h2>
-      <Button onClick={() => navigate('/add-employee')} className="mb-3">Add Employee</Button>
+      <Button onClick={() => navigate('/add-employee')} className="add-employee-btn mb-3">
+        Add Employee
+      </Button>
 
       <Form>
         <Form.Control
@@ -105,15 +109,11 @@ const EmployeeList = () => {
         <Row>
           {filteredEmployees.map((employee) => (
             <Col key={employee.id} md={4} className="mb-3">
-              <EmployeeCard employee={employee} handleDelete={handleDeleteEmployee} />
-              {/* Edit button */}
-              <Button
-                variant="warning"
-                onClick={() => handleEditEmployee(employee.id)}
-                className="mt-2"
-              >
-                Edit
-              </Button>
+              <EmployeeCard
+                employee={employee}
+                handleDelete={handleDeleteEmployee}
+                handleEdit={handleEditEmployee} 
+              />
             </Col>
           ))}
         </Row>
@@ -123,6 +123,7 @@ const EmployeeList = () => {
         <Button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
+          className="pagination-button"
         >
           Previous
         </Button>
@@ -132,6 +133,7 @@ const EmployeeList = () => {
         <Button
           onClick={() => setCurrentPage(currentPage + 1)}
           disabled={currentPage === totalPages}
+          className="pagination-button"
         >
           Next
         </Button>
