@@ -1,5 +1,5 @@
 body.login-register.page {
-    background-image: url('public/bg-img.jpg'); 
+    background-image: url('/bg-img.jpg'); 
     background-size: cover;
     background-position: center;
     height: 100vh; 

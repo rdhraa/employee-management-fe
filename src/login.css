@@ -2,7 +2,7 @@
 
 /* Applying similar background and transparent form styles */
 body.login-register-page {
-    background-image: url('public/bg-img.jpg'); /* Same image as Register page */
+    background-image: url('/bg-img.jpg'); /* Same image as Register page */
     background-size: cover;
     background-position: center;
     height: 100vh;
